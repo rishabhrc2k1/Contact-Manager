@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Add Contact Form</title>
+</head>
+<body>
+
+	<section>
+		<div class="card">
+			<div class="card-body">
+				<h1 class="text-center">Add Contacts</h1>
+
+				<div class="containerfluid mt-1">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<form action="#" th:object="${contact}"
+								enctype="multipart/form-data" method="POST"
+								th:action="@{/user/process-contact}" class="mt-2">
+
+								<div class="input-group">
+									<div class="input-group-prepend"></div>
+									<input type="text" id="firstname" name="name"
+										placeholder="Enter name here" class="form-control" />
+								</div>
+
+								<div class="input-group">
+									<div class="input-group-prepend"></div>
+									<input type="text" id="secondname" name="secondName"
+										placeholder="Enter nick name here" class="form-control" />
+								</div>
+
+								<div class="input-group">
+									<div class="input-group-prepend"></div>
+									<input type="number" id="phone" name="phone"
+										placeholder="Enter phone no here" class="form-control" />
+								</div>
+
+								<div class="input-group">
+									<div class="input-group-prepend"></div>
+									<input type="email" id="email" name="email"
+										placeholder="Enter mail here" class="form-control" />
+								</div>
+
+						
+
+								<div class="input-group">
+									<div class="input-group-prepend"></div>
+									<input type="text" id="work" name="work"
+										placeholder="Enter your work here" class="form-control" />
+								</div>
+
+								<div class="form-group mt-3">
+									<textarea placeholder="Enter contact description"
+										name="description" id="description" class="form.control"
+										cols="60" rows="10"></textarea>
+								</div>
+
+								<div class="custom-file">
+									<input type="file" name="profileImage" />
+								</div>
+								
+								
+								<div class="container text-center ">
+								  <button class="btn btn-outline-primary">Save Contact</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
